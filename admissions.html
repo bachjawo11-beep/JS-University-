@@ -1,1 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admissions | JS University</title>
 
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav class="navbar">
+
+        <div class="logo-svg">
+    
+<svg width="52" height="52" viewBox="0 0 64 64">
+
+  <!-- Shield -->
+  <path d="M32 2 L54 10 V28 C54 44 44 56 32 62 C20 56 10 44 10 28 V10 Z"
+        fill="gold" stroke="#000" stroke-width="2"/>
+
+  <!-- Inner border -->
+  <path d="M32 6 L50 12 V27 C50 41 41 51 32 56 C23 51 14 41 14 27 V12 Z"
+        fill="black" opacity="0.9"/>
+
+  <!-- Book -->
+  <path d="M20 28 H44 V44 H20 Z" fill="gold"/>
+
+  <path d="M32 28 V44" stroke="black" stroke-width="2"/>
+
+  <!-- Torch -->
+  <path d="M32 14 C30 18 28 20 28 24 C28 28 36 28 36 24 C36 20 34 18 32 14 Z"
+        fill="gold"/>
+
+  <!-- Flame -->
+  <path d="M32 10 C30 12 30 14 32 16 C34 14 34 12 32 10 Z"
+        fill="orange"/>
+
+</svg>
+
+<div class="logo-text">
+    <div class="title">JS University</div>
+    <div class="subtitle">Excellence • Knowledge • Future</div>
+</div>
+
+</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="portal.html">Student Portal</a></li>
+        </ul>
+
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Admissions 2026</h1>
+
+        <p>
+            Begin your academic journey at
+            JS University and unlock your future.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ADMISSION REQUIREMENTS -->
+<section class="section">
+
+    <div class="section-title">
+        <h2>Admission Requirements</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <i class="fas fa-file"></i>
+            <h3>Application Form</h3>
+            <p>
+                Complete the online application form.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-id-card"></i>
+            <h3>Identification</h3>
+            <p>
+                Valid National ID, Passport or Birth Certificate.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-school"></i>
+            <h3>Academic Records</h3>
+            <p>
+                Submit previous academic certificates
+                and transcripts.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-user-check"></i>
+            <h3>Eligibility</h3>
+            <p>
+                Meet the entry requirements for
+                your chosen program.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- APPLICATION FORM -->
+<section class="section">
+
+    <div class="section-title">
+        <h2>Apply Online</h2>
+    </div>
+    
+    <p class="apply-subtitle">
+Begin your journey at JS University by completing the application form below.
+</p>
+
+    <form id="admissionForm" class="contact-form">
+
+        <input
+            type="text"
+            placeholder="Full Name"
+            required>
+
+        <input
+            type="email"
+            placeholder="Email Address"
+            required>
+
+        <input
+            type="tel"
+            placeholder="Phone Number"
+            required>
+
+        <input
+            type="text"
+            placeholder="Nationality"
+            required>
+
+        <select
+            required
+            style="
+            padding:15px;
+            border:none;
+            border-radius:10px;
+            background:#222;
+            color:white;
+            ">
+
+            <option value="">
+                Select Program
+            </option>
+
+            <option>
+                Computer Science
+            </option>
+
+            <option>
+                Business Administration
+            </option>
+
+            <option>
+                Applied Sciences
+            </option>
+
+            <option>
+                Law
+            </option>
+
+        </select>
+
+        <textarea
+            rows="5"
+            placeholder="Why do you want to join JS University?"
+            required></textarea>
+
+        <button
+            type="submit"
+            class="btn">
+
+            Submit Application
+
+        </button>
+
+    </form>
+
+</section>
+
+<!-- ADMISSION PROCESS -->
+<section class="section">
+
+    <div class="section-title">
+        <h2>Admission Process</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Step 1</h3>
+            <p>
+                Complete the application form.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Step 2</h3>
+            <p>
+                Submit supporting documents.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Step 3</h3>
+            <p>
+                Application review and verification.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Step 4</h3>
+            <p>
+                Receive admission decision.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+
+    <div class="section-title">
+        <h2>Admissions Office</h2>
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <p>
+                <i class="fas fa-location-dot"></i>
+                Manjai Kunda, The Gambia
+            </p>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                +220 7597080
+            </p>
+
+            <p>
+                <i class="fas fa-envelope"></i>
+                admissions@jsuniversity.edu
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Need Help?</h3>
+
+            <p>
+                Contact the admissions office for
+                guidance regarding applications,
+                scholarships and programs.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 JS University.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+  </html>
