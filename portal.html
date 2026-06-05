@@ -1,1 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Portal | JS University</title>
 
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav class="navbar">
+
+        <div class="logo-svg">
+    
+<svg width="52" height="52" viewBox="0 0 64 64">
+
+  <!-- Shield -->
+  <path d="M32 2 L54 10 V28 C54 44 44 56 32 62 C20 56 10 44 10 28 V10 Z"
+        fill="gold" stroke="#000" stroke-width="2"/>
+
+  <!-- Inner border -->
+  <path d="M32 6 L50 12 V27 C50 41 41 51 32 56 C23 51 14 41 14 27 V12 Z"
+        fill="black" opacity="0.9"/>
+
+  <!-- Book -->
+  <path d="M20 28 H44 V44 H20 Z" fill="gold"/>
+
+  <path d="M32 28 V44" stroke="black" stroke-width="2"/>
+
+  <!-- Torch -->
+  <path d="M32 14 C30 18 28 20 28 24 C28 28 36 28 36 24 C36 20 34 18 32 14 Z"
+        fill="gold"/>
+
+  <!-- Flame -->
+  <path d="M32 10 C30 12 30 14 32 16 C34 14 34 12 32 10 Z"
+        fill="orange"/>
+
+</svg>
+
+<div class="logo-text">
+    <div class="title">JS University</div>
+    <div class="subtitle">Excellence • Knowledge • Future</div>
+</div>
+
+</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Student Portal</h1>
+        <p>
+            Access your courses, announcements,
+            results and academic information.
+        </p>
+    </div>
+
+</section>
+
+<!-- LOGIN SECTION -->
+<section class="section">
+
+    <div class="section-title">
+        <h2>Student Login</h2>
+    </div>
+
+    <div id="loginBox"
+         style="
+         max-width:500px;
+         margin:auto;
+         ">
+
+        <form id="loginForm"
+              class="contact-form">
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Student Username"
+                required>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required>
+
+            <button
+                type="submit"
+                class="btn">
+                Login
+            </button>
+
+        </form>
+
+        <div style="
+        margin-top:20px;
+        text-align:center;
+        ">
+            <p>
+                Demo Account:
+            </p>
+            <p><strong>Username:</strong> student</p>
+            <p><strong>Password:</strong> 1234</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DASHBOARD -->
+<section class="section"
+         id="dashboard"
+         style="display:none;">
+
+    <div class="section-title">
+        <h2>Student Dashboard</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Announcements</h3>
+            <p>
+                Semester registration opens next week.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-book"></i>
+            <h3>My Courses</h3>
+            <p>
+                Computer Science 101<br>
+                Web Development<br>
+                Database Systems
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Results</h3>
+            <p>
+                GPA: 3.8 / 4.0
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-calendar"></i>
+            <h3>Academic Calendar</h3>
+            <p>
+                Midterm Exams: July 15<br>
+                Final Exams: September 10
+            </p>
+        </div>
+        
+        <div class="card">
+    <h3>Student Record</h3>
+
+    <p><strong>ID:</strong> <span id="studentId"></span></p>
+    <p><strong>Program:</strong> <span id="studentProgram"></span></p>
+    <p><strong>Level:</strong> <span id="studentLevel"></span></p>
+    <p><strong>Status:</strong> <span id="studentStatus"></span></p>
+</div>
+
+<div class="card">
+
+    <h3>Admission History</h3>
+
+    <p><strong>Status:</strong>
+        <span id="admissionStatus">-</span>
+    </p>
+
+    <p><strong>Applied:</strong>
+        <span id="applicationDate">-</span>
+    </p>
+
+    <p><strong>Approved:</strong>
+        <span id="approvalDate">-</span>
+    </p>
+
+</div>
+
+    </div>
+
+</section>
+
+<!-- QUICK LINKS -->
+<section class="section">
+
+    <div class="section-title">
+        <h2>Quick Links</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <i class="fas fa-file-pdf"></i>
+            <h3>Course Materials</h3>
+            <p>
+                Download lecture notes and resources.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-money-bill-wave"></i>
+            <h3>Fees Information</h3>
+            <p>
+                View tuition and payment schedules.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-envelope"></i>
+            <h3>Student Support</h3>
+            <p>
+                Contact academic advisors and support staff.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>
+        © 2026 JS University.
+        All Rights Reserved.
+    </p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+      </html>
