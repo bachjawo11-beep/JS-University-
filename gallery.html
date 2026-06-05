@@ -1,1 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | JS University</title>
 
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+/* Gallery Grid */
+
+.gallery{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    cursor:pointer;
+    border:3px solid gold;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* Lightbox */
+
+#lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.95);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:20px;
+}
+
+#lightbox img{
+    max-width:90%;
+    max-height:90vh;
+    border-radius:10px;
+    border:4px solid gold;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo-svg">
+    
+<svg width="52" height="52" viewBox="0 0 64 64">
+
+  <!-- Shield -->
+  <path d="M32 2 L54 10 V28 C54 44 44 56 32 62 C20 56 10 44 10 28 V10 Z"
+        fill="gold" stroke="#000" stroke-width="2"/>
+
+  <!-- Inner border -->
+  <path d="M32 6 L50 12 V27 C50 41 41 51 32 56 C23 51 14 41 14 27 V12 Z"
+        fill="black" opacity="0.9"/>
+
+  <!-- Book -->
+  <path d="M20 28 H44 V44 H20 Z" fill="gold"/>
+
+  <path d="M32 28 V44" stroke="black" stroke-width="2"/>
+
+  <!-- Torch -->
+  <path d="M32 14 C30 18 28 20 28 24 C28 28 36 28 36 24 C36 20 34 18 32 14 Z"
+        fill="gold"/>
+
+  <!-- Flame -->
+  <path d="M32 10 C30 12 30 14 32 16 C34 14 34 12 32 10 Z"
+        fill="orange"/>
+
+</svg>
+
+<div class="logo-text">
+    <div class="title">JS University</div>
+    <div class="subtitle">Excellence • Knowledge • Future</div>
+</div>
+
+</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="admissions.html">Admissions</a></li>
+<li><a href="portal.html">Portal</a></li>
+</ul>
+
+<div class="menu-btn">
+<i class="fas fa-bars"></i>
+</div>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Campus Gallery</h1>
+
+<p>
+Explore life at JS University through our
+campus photos, events, classrooms and student activities.
+</p>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>Photo Gallery</h2>
+</div>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80" alt="Library">
+
+<img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200"
+alt="Lecture Hall">
+
+<img src="https://images.unsplash.com/photo-1562774053-701939374585?w=1200"
+alt="Students">
+
+<img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=1200"
+alt="Graduation">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200"
+alt="Team Work">
+
+</div>
+
+</section>
+
+<!-- EVENTS -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>Campus Activities</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<i class="fas fa-laptop-code"></i>
+<h3>Technology Fair</h3>
+<p>
+Students showcase innovative projects and research.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-futbol"></i>
+<h3>Sports Events</h3>
+<p>
+Inter-faculty sports competitions and tournaments.
+</p>
+</div>
+
+<div class="card">
+<i class="fas fa-music"></i>
+<h3>Cultural Festival</h3>
+<p>
+Celebrating diversity through music, art and culture.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- LIGHTBOX -->
+
+<div id="lightbox">
+
+<span class="close-lightbox">&times;</span>
+
+<img id="lightbox-img" src="" alt="Preview">
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+<p>
+© 2026 JS University. All Rights Reserved.
+</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+
+// Close button support
+
+const closeBtn =
+document.querySelector(".close-lightbox");
+
+if(closeBtn){
+
+closeBtn.addEventListener("click", () => {
+
+document.getElementById("lightbox")
+.style.display = "none";
+
+});
+
+}
+
+</script>
+
+</body>
+  </html>
